@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  display: flex;
+}
+section {
+  width: 50%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.leftside {
+  justify-content: center;
+  background-color: #455864;
+}
+.bookmarks {
+  align-items: center;
+  padding: 0px;
+  background-color: #CFD8DC;
+  overflow-y: scroll;
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+h1 {
+  display: inline-block;
+  margin-top: 0;
+  color: #FFFFFF;
+  font-size: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#icon {
+}
+.input {
+  display: block;
+  width: 80%;
+  height: 50px;
+  margin: 50px auto;
+  padding-left: 10px;
+  color: #455A64;
+  font-size: 25px;
+}
+#enter-button {
+  width: 80%;
+  height: 50px;
+  display: block;
+  margin: 25px auto;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  background-color: #FFC107;
+  font-size: 15px;
+  text-align: center;
+}
+#enter-button:hover {
+  background-color: #FFD773;
+}
+/*#enter-button:disabled {
+  background-color: #CFD8DC;
+}*/
+/*CHANGED*/
+.bookmark-container {
+  /*height: 100vh;*/
+  height: 20%;
+  min-height: 20%;
+  margin: 5%;
+  width: 95%;
+  align-self: center;
+  /*text-align: center;*/
+  border: 3px solid #607D8B;
+  background-color: #FFFFFF;
+}
+/*CHANGED*/
+h2 {
+  display: block;
+  color: #455A64;
+  margin-left: 5%;
+  font-size: 250%;
+  margin-top: 2%;
+  font-weight: lighter;
+}
+h3 {
+  display: block;
+  color: #607D8B;
+  text-decoration: underline #F2F4F4;
+}
+#mark-as-read-button,
+#delete-button {
+  display: inline-block;
+  color: #455A64;
+  text-decoration: underline #455A64;
+  border: none;
+  outline: none;
+  padding: 0;
+  background: none;
+}
+#mark-as-read-button {
+  justify-content: center;
+  margin-right: 30px;
+}
+#delete-button:hover,
+#mark-as-read-button:hover, {
+  text-decoration: underline #FFC107;
+}
+.read{
+  background-color: #F2F4F4;
+  font-color:
+}
+
+/* after we met on sunday*/
+/* after we met on sunday*/
+a.read{
+}
+
+.bookmarklinks{
+  font-size: 170%;
+
+}
+div.linkdiv{
+  width: 90%;
+  max-height: 100px;
+  border-top: 1px solid #607D8B;
+  border-bottom: 1px solid #607D8B;
+  margin: auto;
+  padding: 3%;
+}
+#readbutton{
+  float: left;
+  margin-top: 10px;
+  margin-left: 5%;
+  width: 80px;
+  height: 40px;
+
+}
+#readbutton2{
+  float: left;
+  margin-top: 10px;
+  margin-left: 5%;
+  width: 800px;
+  height: 40px;
+  font-color: #F05A28;
+}
+
+#deletebutton{
+  float: right;
+  margin-top: 10px;
+  width: 80px;
+  height: 40px;
+  font-size: 125%;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.deletebox{
+  display: none;
+}
