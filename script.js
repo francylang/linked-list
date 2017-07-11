@@ -1,7 +1,6 @@
 var enterButton = document.getElementById("enter-button");
 var rightSection = $('.rightside');
 var readButton = document.getElementById('mark-as-read-button');
-
 var bookMarkCounter = 0;
 var readCounter = 0;
 
@@ -26,22 +25,6 @@ enterButton.addEventListener('click', function() {
   "</div>"
 );
 })
-// enterButton.addEventListener('click', function() {
-//   var inputTitle = $('#website-title');
-//   var inputURL= $('#website-url');
-// console.log(inputTitle.val());
-//   $(rightSection).prepend(
-//     "<div class='bookmark-container'>" +
-//       "<h2 id='bookmark-line-title'>" + inputTitle.val() + "</h2>" +
-//       "<div class='linkdiv'>" +
-//         "<a href='" + inputURL.val()  + "' class='bookmarklinks'>" + inputURL.val() + "</a>" +
-//         "</div>" +
-//        "<button id='readbutton' href='#'>Read</button>" +
-//       "<button id='deletebutton' href='#'>Delete</button>" +
-//     "</div>"
-  // );
-  // })
-
 
 // marks bookmark as read and toggles read class
   $(rightSection).on('click', '#mark-as-read-button', function(){
@@ -59,6 +42,3 @@ $(rightSection).on('click', '#delete-button', function(){
   readCounter = readCounter - 1;
   document.querySelector('#readqty').innerText = readCounter;
 });
-
-
-// document.getElementById("myDIV").className = "mystyle";
