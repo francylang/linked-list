@@ -1,6 +1,6 @@
-** Tasks
+# Tasks
 
-** Tuesday
+## Tuesday
 * Style classes for Read
 * Style get hovering and colors and crap working 
 
@@ -14,7 +14,7 @@
 
 * Once above is complete, work on responsiveness
 
-** Wednesday
+## Wednesday
 * Maybe work on Phase 4 and responsiveness at same time
   * clear read bookmarks button
   * check URLs to be valid
