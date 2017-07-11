@@ -1,17 +1,15 @@
-var enterButton = document.getElementById("enter-button");
 var rightSection = $('.rightside');
+
 var readButton = document.getElementById('mark-as-read-button');
 var bookMarkCounter = 0;
 var readCounter = 0;
 
 
 
+
 enterButton.addEventListener('click', function() {
   var inputTitle = $('#website-title');
    var inputURL= $('#website-url');
-  bookMarkCounter = bookMarkCounter + 1;
-  console.log(bookMarkCounter);
-  document.querySelector('#qty').innerText = bookMarkCounter;
    console.log(inputTitle.val());
   $(rightSection).prepend(
 "<div class='rightmid'>" +
@@ -25,6 +23,24 @@ enterButton.addEventListener('click', function() {
   "</div>"
 );
 })
+
+
+var readButton = document.getElementById('mark-as-read-button');
+
+var bookMarkCounter = 0;
+var readCounter = 0;
+
+
+var inputTitle = document.getElementById('website-title')
+var enterButton = document.getElementById('enter-button');
+inputTitle.addEventListener('keyup', function() {
+     if (inputTitle.value !== "") {
+         enterButton.disabled = false;
+     } else {
+         enterButton.disabled = true;
+     }
+ });
+
 
 // marks bookmark as read and toggles read class
   $(rightSection).on('click', '#mark-as-read-button', function(){
