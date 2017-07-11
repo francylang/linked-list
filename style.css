@@ -151,7 +151,7 @@ hr {
 #delete-button {
   display: inline-block;
   position: relative;
-  color: #455A64;
+  /*color: #455A64;*/
   text-decoration: underline #455A64;
   border: none;
   outline: none;
@@ -172,11 +172,7 @@ hr {
 #mark-as-read-button:hover, {
   text-decoration: underline #FFC107;
 }
-.read{
-  background-color: #F2F4F4;
-  /*color: #F05A28;
-  text-decoration-color: #CFD8DC;*/
-}
+
 .bookmarklinks{
   font-size: 20px;
   margin-left: 20px;
@@ -190,6 +186,15 @@ div.linkdiv{
 /*hides bookmark on delete click*/
 .deletebox{
   display: none;
+}
+.button{
+    color: #455A64;
+}
+.read{
+  background-color: #F2F4F4;
+  color: #F05A28;
+  text-decoration-color: #CFD8DC;
+  width: 600px;
 }
 
 /*#readbutton{
