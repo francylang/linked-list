@@ -22,6 +22,18 @@ enterButton.addEventListener('click', function() {
   "</div>"
 );
 })
+var $inputTitle = $('#website-title');
+var $enterButton = $('#enter-button');
+
+
+$inputTitle.addEventListener('click', function() {
+  var $inputTitle = $('#website-title');
+  var $enterButton = $('#enter-button');
+$('#enter-button').attr('disabled', false);
+
+}
+
+
 // enterButton.addEventListener('click', function() {
 //   var inputTitle = $('#website-title');
 //   var inputURL= $('#website-url');
