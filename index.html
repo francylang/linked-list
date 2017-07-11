@@ -9,30 +9,35 @@
   </head>
   <body>
     <section class="leftside">
-      <header>
-        <h1 id="linked">Linked</h1>
-        <img id="icon" src="linked-list-logo.svg" height="110px" width="110px">
-        <h1 id="linked">List</h1>
-      </header>
-      <form>
-        <!--1st input field-->
-        <input class="input" id="website-title" type="text" name="website title" value="" placeholder="Website Title">
-        <!--2nd input field-->
-        <input class="input" id="website-url" type="url" name="website url" value="" placeholder="Website URL">
-        <!--button for creating the bookmark and adding it to the page-->
-        <input class="button" id="enter-button" name="enter" value="Enter">
-      </form>
+      <div class="leftmid">
+        <header>
+          <h1 id="linked">Linked</h1>
+          <img id="icon" src="linked-list-logo.svg" height="110px" width="110px">
+          <h1 id="linked">List</h1>
+        </header>
+        <form>
+          <!--1st input field-->
+          <input class="input" id="website-title" type="text" name="website title" value="" placeholder="Website Title">
+          <!--2nd input field-->
+          <input class="input" id="website-url" type="url" name="website url" value="" placeholder="Website URL">
+          <!--button for creating the bookmark and adding it to the page-->
+          <input class="button" id="enter-button" name="enter" value="Enter">
+        </form>
+      </div>
     </section>
     <!--section for all the created bookmarks-->
     <section class="rightside">
 <!-- Placeholder, to be transferred to JQ -->
-      <div class="bookmarkbox">
-        <h2 id="bookmark-line-title">Title Here</h2>
-        <h3 id="bookmark-line-url">www.TheWebsiteURL.com</h3>
-        <input class="button" id="mark-as-read-button" type="submit" name="enter" value="Mark as Read">
-        <input class="button" id="delete-button" type="submit" name="enter" value="Delete">
-
-<!-- end placeholder -->
+      <div class="rightmid">
+        <div class="bookmarkbox">
+          <h2 id="bookmark-line-title">The Website Title</h2>
+          <hr id="hrOne">
+          <h3 id="bookmark-line-url">www.theWebsiteURL.com</h3>
+          <hr id="hrTwo">
+          <input class="button" id="mark-as-read-button" type="submit" name="enter" value="Read">
+          <input class="button" id="delete-button" type="submit" name="enter" value="Delete">
+        </div>
+  <!-- end placeholder -->
       </div>
     </section>
     <script src="script.js" charset="utf-8"></script>
