@@ -6,11 +6,11 @@
 
 * Display error if an input left blank
 
-* disable enter button if boxes are blank
+* ~disable enter button if boxes are blank~
 
-* keep count of links on page
+* ~keep count of links on page~
 
-* count of read/unread links on page
+* ~count of read/unread links on page~
 
 * Once above is complete, work on responsiveness
 
