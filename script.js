@@ -42,7 +42,7 @@ enterButton.addEventListener('click', function() {
 // marks bookmark as read and toggles read class
   $(rightSection).on('click', '#mark-as-read-button', function(){
     console.log(this);
-  $(this).parent().toggleClass('');
+  $(this).parent().toggleClass('read');
   $(this).toggleClass('read');
 });
 
