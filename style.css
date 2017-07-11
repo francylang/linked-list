@@ -196,6 +196,12 @@ div.linkdiv{
   text-decoration-color: #CFD8DC;
   width: 600px;
 }
+.bookmarkqty{
+  color: #FFFFFF;
+  font-weight: 400;
+  margin: auto;
+}
+
 
 /*#readbutton{
   float: left;
