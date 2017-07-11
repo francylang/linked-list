@@ -83,7 +83,7 @@ h1 {
   color: #455A64;
   font-size: 25px;
 }
-#enter-button {
+#enter-button:disabled {
   width: 80%;
   height: 50px;
   display: block;
@@ -91,16 +91,26 @@ h1 {
   border: none;
   outline: none;
   color: #FFFFFF;
-  background-color: #FFC107;
+  background-color: #FFD773;
   font-size: 15px;
   text-align: center;
 }
 #enter-button:hover {
   background-color: #FFD773;
 }
-/*#enter-button:disabled {
-  background-color: #CFD8DC;
-}*/
+#enter-button {
+  background-color: #FFC107;
+  color: #FFFFFF;
+  width: 80%;
+  height: 50px;
+  display: block;
+  margin: 25px auto;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+
+}
 /*CHANGED*/
 .bookmarkbox {
   /*height: 100vh;*/
