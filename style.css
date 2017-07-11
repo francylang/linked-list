@@ -157,10 +157,12 @@ hr {
 }
 .read{
   background-color: #F2F4F4;
-  font-color:
+  /*color: #F05A28;
+  text-decoration-color: #CFD8DC;*/
 }
 .bookmarklinks{
-  font-size: 300px;
+  font-size: 20px;
+  margin-left: 20px;
 }
 div.linkdiv{
   max-height: 100px;
@@ -168,7 +170,11 @@ div.linkdiv{
   border-bottom: 1px solid #607D8B;
   margin: auto;
 }
-@media
+/*hides bookmark on delete click*/
+.deletebox{
+  display: none;
+}
+
 /*#readbutton{
   float: left;
   margin-top: 10px;
@@ -193,7 +199,3 @@ div.linkdiv{
   margin-top: 10px;
   margin-right: 10px;
 }*/
-/*hides bookmark on delete click*/
-.deletebox{
-  display: none;
-}

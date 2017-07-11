@@ -6,7 +6,22 @@ var counter = 0;
 var myArray = [];
 
 
-
+enterButton.addEventListener('click', function() {
+  var inputTitle = $('#website-title');
+   var inputURL= $('#website-url');
+   console.log(inputTitle.val());
+  $(rightSection).prepend(
+"<div class='rightmid'>" +
+  "<div class='bookmarkbox'>" +
+    "<h2 id='bookmark-line-title'>" + inputTitle.val() + "</h2>" +
+    "<hr id='hrOne'>" +
+    "<a href='" + inputURL.val()  + "' class='bookmarklinks'>" + inputURL.val() + "</a>" +
+    "<hr id='hrTwo'>" +
+    "<input class='button' id='mark-as-read-button' type='submit' name='enter' value='Read'>" +
+    "<input class='button' id='delete-button' type='submit' name='enter' value='Delete'>" +
+  "</div>"
+);
+})
 // enterButton.addEventListener('click', function() {
 //   var inputTitle = $('#website-title');
 //   var inputURL= $('#website-url');
@@ -20,18 +35,19 @@ var myArray = [];
 //        "<button id='readbutton' href='#'>Read</button>" +
 //       "<button id='deletebutton' href='#'>Delete</button>" +
 //     "</div>"
-  );
-  })
+  // );
+  // })
 
 
 // marks bookmark as read and toggles read class
-  $(rightSection).on('click', '#readbutton', function(){
+  $(rightSection).on('click', '#mark-as-read-button', function(){
+    console.log(this);
   $(this).parent().toggleClass('read');
-  $(this).css('width', '400px');
+  $(this).toggleClass('read');
 });
 
 // deletes bookmark.  sets display to none.
-$(rightSection).on('click', '#deletebutton', function(){
+$(rightSection).on('click', '#delete-button', function(){
 $(this).parent().addClass('deletebox');
 
 });
