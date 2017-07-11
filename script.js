@@ -1,5 +1,6 @@
 var rightSection = $('.rightside');
-var counter = 0;
+
+
 
 enterButton.addEventListener('click', function() {
   var inputTitle = $('#website-title');
@@ -18,6 +19,12 @@ enterButton.addEventListener('click', function() {
 );
 })
 
+var readButton = document.getElementById('mark-as-read-button');
+
+var bookMarkCounter = 0;
+var readCounter = 0;
+
+
 var inputTitle = document.getElementById('website-title')
 var enterButton = document.getElementById('enter-button');
 inputTitle.addEventListener('keyup', function() {
@@ -28,15 +35,23 @@ inputTitle.addEventListener('keyup', function() {
      }
  });
 
+
 // marks bookmark as read and toggles read class
   $(rightSection).on('click', '#mark-as-read-button', function(){
-    console.log(this);
   $(this).parent().toggleClass('read');
   $(this).toggleClass('read');
+  readCounter = document.querySelectorAll('.bookmarkbox .read').length;
+  document.querySelector('#readqty').innerText = readCounter;
 });
 
 // deletes bookmark.  sets display to none.
 $(rightSection).on('click', '#delete-button', function(){
-$(this).parent().addClass('deletebox');
-
+  $(this).parent().addClass('deletebox');
+  bookMarkCounter = bookMarkCounter - 1;
+  document.querySelector('#qty').innerText = bookMarkCounter;
+  readCounter = readCounter - 1;
+  document.querySelector('#readqty').innerText = readCounter;
 });
+
+
+// document.getElementById("myDIV").className = "mystyle";
