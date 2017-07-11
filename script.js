@@ -1,5 +1,10 @@
 var rightSection = $('.rightside');
 
+var readButton = document.getElementById('mark-as-read-button');
+var bookMarkCounter = 0;
+var readCounter = 0;
+
+
 
 
 enterButton.addEventListener('click', function() {
@@ -18,6 +23,7 @@ enterButton.addEventListener('click', function() {
   "</div>"
 );
 })
+
 
 var readButton = document.getElementById('mark-as-read-button');
 
@@ -52,6 +58,3 @@ $(rightSection).on('click', '#delete-button', function(){
   readCounter = readCounter - 1;
   document.querySelector('#readqty').innerText = readCounter;
 });
-
-
-// document.getElementById("myDIV").className = "mystyle";
