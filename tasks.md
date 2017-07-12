@@ -24,4 +24,4 @@
 * Maybe work on Phase 4 and responsiveness at same time
   * clear read bookmarks button
   * check URLs to be valid
-
+* ### Mark as read subtractor doesnt work
