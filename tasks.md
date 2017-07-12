@@ -28,3 +28,4 @@
 
 * robbie figure out regexp for vailid url?
 * robbie add total unread count to the page
+* robbie do a little UI for counts
