@@ -151,18 +151,18 @@ hr {
   margin-top: 0;
   margin-bottom: 20px;
 }
-.button {
+.button, .read-button, .delete-button {
   margin-left: 20px;
   font-size: 16px;
   font-weight: 30px;
   outline: none;
 }
-#mark-as-read-button,
-#delete-button {
+.read-button, .delete-button {
   display: inline-block;
   position: relative;
-  /*color: #455A64;*/
-  text-decoration: underline #455A64;
+  color: #455A64;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
   border: none;
   outline: none;
   padding-bottom: 0;
@@ -170,22 +170,29 @@ hr {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#delete-button {
+.delete-button {
   display: block;
   float: right;
   margin-right: 25px;
 }
-#mark-as-read-button {
-  /*padding-left: 3%;*/
+.read-button:hover {
+  text-decoration-color: #FFC107;
+  font-weight: 800;
 }
-#delete-button:hover,
-#mark-as-read-button:hover, {
-  text-decoration: underline #FFC107;
+.delete-button:hover{
+  text-decoration-color: #FFC107;
 }
 
 .bookmarklinks{
   font-size: 20px;
   margin-left: 20px;
+  color: #607D8B;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+}
+.bookmarklinks:hover{
+  text-decoration-color: #FFC107;
+  font-weight: 800;
 }
 div.linkdiv{
   max-height: 100px;
@@ -203,37 +210,9 @@ div.linkdiv{
 .read{
   background-color: #F2F4F4;
   color: #F05A28;
-  text-decoration-color: #CFD8DC;
-  width: 600px;
 }
 .bookmarkqty{
   color: #FFFFFF;
   font-weight: 400;
   margin: auto;
 }
-
-
-/*#readbutton{
-  float: left;
-  margin-top: 10px;
-  margin-left: 5%;
-  width: 80px;
-  height: 40px;
-}
-#readbutton2{
-  float: left;
-  margin-top: 10px;
-  margin-left: 5%;
-  width: 800px;
-  height: 40px;
-  font-color: #F05A28;
-}*/
-/*#deletebutton{
-  float: right;
-  margin-top: 10px;
-  width: 80px;
-  height: 40px;
-  font-size: 125%;
-  margin-top: 10px;
-  margin-right: 10px;
-}*/

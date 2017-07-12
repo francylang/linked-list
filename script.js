@@ -2,7 +2,8 @@ var rightSection = $('.rightside');
 var readButton = document.getElementById('mark-as-read-button');
 var bookMarkCounter = 0;
 var readCounter = 0;
-var inputTitle = document.getElementById('website-title')
+var inputTitle = document.getElementById('website-title');
+var inputUrl = document.getElementById('website-url');
 var enterButton = document.getElementById('enter-button');
 
 inputTitle.addEventListener('keyup', function() {
@@ -13,13 +14,20 @@ inputTitle.addEventListener('keyup', function() {
      }
  });
 
+function blankInput(){
+  if(inputTitle.value === "" || inputUrl.value === ""){
+    alert("Please enter a title and web address.")
+  }
+}
+
+enterButton.addEventListener('click', blankInput);
+
+
  enterButton.addEventListener('click', function() {
    var inputTitle = $('#website-title');
     var inputURL= $('#website-url');
    bookMarkCounter = bookMarkCounter + 1;
-   console.log(bookMarkCounter);
    document.querySelector('#qty').innerText = bookMarkCounter;
-    console.log(inputTitle.val());
    $(rightSection).prepend(
  "<div class='rightmid'>" +
    "<div class='bookmarkbox'>" +
@@ -27,8 +35,8 @@ inputTitle.addEventListener('keyup', function() {
      "<hr id='hrOne'>" +
      "<a href='" + inputURL.val()  + "' class='bookmarklinks'>" + inputURL.val() + "</a>" +
      "<hr id='hrTwo'>" +
-     "<input class='button' id='mark-as-read-button' type='submit' name='enter' value='Read'>" +
-     "<input class='button' id='delete-button' type='submit' name='enter' value='Delete'>" +
+     "<input class='read-button' id='mark-as-read-button' type='submit' name='enter' value='Read'>" +
+     "<input class='delete-button' id='delete-button' type='submit' name='enter' value='Delete'>" +
    "</div>"
  );
  })
