@@ -8,23 +8,33 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+h1 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+  font-size: 70px;
+  /*margin-right: 20px;
+  margin-left: 20px;*/
+}
+
 section {
   width: 50%;
   min-height: 100vh;
   /*display: flex;
   flex-direction: row;*/
 }
-@media (max-width: 1100px){
-  body{
-    flex-direction: column;
-  }
-  section{
-    width: 100%
-  }
-}
+
 .leftside {
   justify-content: center;
   background-color: #455864;
+  padding-top: 40px;
   /*display: flex;
   flex-direction: row;*/
 }
@@ -36,43 +46,50 @@ section {
   /*display: flex;
   flex-direction: row;*/
 }
+
+/*this would display that the bookmark area is empty*/
+.filler-text {
+  font-size: 50px;
+  color: #455864;
+  text-align: center;
+}
+
+.filler-container {
+}
+/*
 .leftmid{
   display: flex;
   flex-direction: column;
   position: fixed;
   left: 7%;
   top: 20%;
-}
-@media (max-width: 1100px){
-  body{
-    flex-direction: column;
+}*/
+
+
+/*.leftmid{
+  position: absolute;
+  left: 17%;
+  top: 20%;
   }
-  section{
-    width: 100%
-  }
-  .leftmid{
-    position: absolute;
-    left: 17%;
-    top: 20%;
-  }
-}
+}*/
 .rightmid{
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
 }
-header {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+
+
+#linked {
+  margin-right: 10px;
 }
-h1 {
-  display: inline-block;
-  margin-top: 0;
-  color: #FFFFFF;
-  font-size: 80px;
-  margin-right: 20px;
-  margin-left: 20px;
+
+#list {
+  margin-left: 10px;
+}
+
+#icon {
+  width: 100px;
+  height: 100px;
 }
 .input {
   display: block;
@@ -82,10 +99,18 @@ h1 {
   padding-left: 10px;
   color: #455A64;
   font-size: 25px;
+  font-weight: 400;
+  border: none;
 }
+
+.input:focus {
+  outline-style: auto;
+  outline-color: #455A64;
+}
+
 #enter-button:disabled {
   width: 80%;
-  height: 50px;
+  height: 40px;
   display: block;
   margin: 25px auto;
   border: none;
@@ -93,7 +118,9 @@ h1 {
   color: #FFFFFF;
   background-color: #FFD773;
   font-size: 15px;
+  font-weight: 800;
   text-align: center;
+  letter-spacing: 1px;
 }
 #enter-button:hover {
   background-color: #FFD773;
@@ -109,8 +136,23 @@ h1 {
   outline: none;
   font-size: 15px;
   text-align: center;
-
+  letter-spacing: 1px;
 }
+
+h3{
+  text-align: center;
+}
+
+.bookmarkqty{
+  color: #FFFFFF;
+  font-weight: 400;
+  display: block;
+  width: 80%;
+  height: 40px;
+  margin: 50px auto;
+  padding-left: 10px;
+}
+
 /*CHANGED*/
 .bookmarkbox {
   /*height: 100vh;*/
@@ -123,15 +165,18 @@ h1 {
   border: 3px solid #607D8B;
   background-color: #FFFFFF;
 }
-#bookmark-line-title{
-  display: block;
+
+/*fix it*/
+#bookmark-line-title {
+  padding-left: 15px;
+  padding-bottom: 5px;
   color: #455A64;
-  margin-left: 20px;
   font-size: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  letter-spacing: 1px;
+  display: block;
   font-weight: 300px;
 }
+
 #bookmark-line-url{
   display: block;
   color: #607D8B;
@@ -139,6 +184,7 @@ h1 {
   text-decoration: underline #F2F4F4;
   font-weight: lighter;
 }
+
 hr {
   width: 93%;
   height: 2px;
@@ -211,8 +257,97 @@ div.linkdiv{
   background-color: #F2F4F4;
   color: #F05A28;
 }
-.bookmarkqty{
-  color: #FFFFFF;
-  font-weight: 400;
-  margin: auto;
-}
+
+
+/*
+@media (max-width: 1100px){
+  body{
+    flex-direction: column;
+  }*/
+
+
+  /*Media Queries*/
+
+
+/*320px
+480px
+600px
+768px
+900px
+1024px
+1200px*/
+
+
+@media screen and (max-width: 1200px) {
+    #linked,
+    #list {
+      font-size: 70px;
+    }
+    .icon {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+@media screen and (max-width: 1024px) {
+    #linked,
+    #list {
+      font-size: 60px;
+    }
+    .icon {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+@media screen and (max-width: 900px) {
+    #linked,
+    #list {
+      font-size: 50px;
+    }
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+    .leftside {
+      width: 100%;
+    }
+    .rightside {
+      width: 100%;
+    }
+    .input,
+    .enter-button {
+      height: 40px;
+      width: 80%;
+    }
+  }
+
+  @media screen
+  and (max-width: 480px) {
+    #linked,
+    #list {
+      font-size: 40px;
+    }
+    .icon {
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  @media screen
+  and (max-width: 320px){
+    #linked,
+    #list {
+      font-size: 30px;
+    }
+    .icon {
+        height: 20px;
+        width: 20px;
+    }
+  }
