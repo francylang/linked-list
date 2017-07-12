@@ -27,3 +27,4 @@
 * ### ~Mark as read subtractor doesnt work~
 
 * robbie figure out regexp for vailid url?
+* robbie add total unread count to the page
