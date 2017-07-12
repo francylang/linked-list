@@ -2,7 +2,13 @@
 
 ## Tuesday
 * Style classes for Read
-* Style get hovering and colors and crap working 
+ * font weight: 800; remove text decoration
+* ~Style get hovering and colors and crap working~ 
+ * ~get link font~ 
+ * ~get link underline for both normal and hover state~
+ *  ~On hover, weight goes up on whatever is hovered the font-weight goes to 800~
+ 
+
 
 * Display error if an input left blank
 
