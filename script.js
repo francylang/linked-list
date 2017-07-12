@@ -2,6 +2,7 @@ var rightSection = $('.rightside');
 var readButton = document.getElementById('mark-as-read-button');
 var bookMarkCounter = 0;
 var readCounter = 0;
+var readLength = 0;
 var inputTitle = document.getElementById('website-title');
 var inputUrl = document.getElementById('website-url');
 var enterButton = document.getElementById('enter-button');
@@ -60,16 +61,21 @@ function blankInput(){
   $(rightSection).on('click', '#mark-as-read-button', function(){
   $(this).parent().toggleClass('read');
   $(this).toggleClass('read');
-  readCounter = document.querySelectorAll('.bookmarkbox .read').length;
+  $(this).siblings( ".bookmarklinks" ).toggleClass('readlink');
+  $(this).siblings( ".delete-button" ).toggleClass('readlink');
+  readLength = document.querySelectorAll('.read').length;
+  readCounter = readLength / 2;
   document.querySelector('#readqty').innerText = readCounter;
 });
 
-// deletes bookmark.  sets display to none.
+// deletes bookmark.  sets display to none. DOESNT WORK.
 $(rightSection).on('click', '#delete-button', function(){
   $(this).parent().addClass('deletebox');
   bookMarkCounter = bookMarkCounter - 1;
   document.querySelector('#qty').innerText = bookMarkCounter;
-  readCounter = readCounter - 1;
+  var subtractRead = document.querySelectorAll(' .deletebox .read').length;
+  console.log("subtractRead " + subtractRead);
+  readCounter = readCounter - (subtractRead/subtractRead);
   document.querySelector('#readqty').innerText = readCounter;
 });
 
