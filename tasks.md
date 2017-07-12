@@ -1,8 +1,8 @@
 # Tasks
 
 ## Tuesday
-* Style classes for Read
- * font weight: 800; remove text decoration
+* ~Style classes for Read~
+ * ~font weight: 800; remove text decoration~
 * ~Style get hovering and colors and crap working~ 
  * ~get link font~ 
  * ~get link underline for both normal and hover state~
@@ -24,4 +24,6 @@
 * Maybe work on Phase 4 and responsiveness at same time
   * clear read bookmarks button
   * check URLs to be valid
-* ### Mark as read subtractor doesnt work
+* ### ~Mark as read subtractor doesnt work~
+
+* robbie figure out regexp for vailid url?
