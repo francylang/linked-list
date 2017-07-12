@@ -45,6 +45,8 @@ enterButton.addEventListener('click', blankInput);
   $(rightSection).on('click', '#mark-as-read-button', function(){
   $(this).parent().toggleClass('read');
   $(this).toggleClass('read');
+  $(this).siblings( ".bookmarklinks" ).toggleClass('readlink');
+  $(this).siblings( ".delete-button" ).toggleClass('readlink');
   readCounter = document.querySelectorAll('.bookmarkbox .read').length;
   document.querySelector('#readqty').innerText = readCounter;
 });

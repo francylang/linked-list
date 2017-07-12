@@ -123,6 +123,7 @@ h1 {
   border: 3px solid #607D8B;
   background-color: #FFFFFF;
 }
+/*We might need to change this to a class*/
 #bookmark-line-title{
   display: block;
   color: #455A64;
@@ -132,6 +133,7 @@ h1 {
   margin-bottom: 10px;
   font-weight: 300px;
 }
+/*Dont think this is being used*/
 #bookmark-line-url{
   display: block;
   color: #607D8B;
@@ -210,6 +212,12 @@ div.linkdiv{
 .read{
   background-color: #F2F4F4;
   color: #F05A28;
+  text-decoration-color: none;
+  font-weight: 800;
+}
+.readlink{
+  text-decoration-color: #CFD8DC;
+  font-weight: 400;
 }
 .bookmarkqty{
   color: #FFFFFF;
