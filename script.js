@@ -7,13 +7,20 @@ var inputTitle = document.getElementById('website-title');
 var inputUrl = document.getElementById('website-url');
 var enterButton = document.getElementById('enter-button');
 
-inputTitle.addEventListener('keyup', function() {
+// added to try and make label for empty container
+var bookmarkContainer = document.getElementById('bookmark-container');
+var fillContainer = document.getElementById('filler-container');
+
+document.querySelector('#readqty').innerText = readCounter;
+
+
+function enableButton() {
      if (inputTitle.value !== "") {
          enterButton.disabled = false;
      } else {
          enterButton.disabled = true;
      }
- });
+ };
 
 function blankInput(){
   if(inputTitle.value === "" || inputUrl.value === ""){
@@ -21,7 +28,6 @@ function blankInput(){
   }
 }
 
-enterButton.addEventListener('click', blankInput);
 
 
  enterButton.addEventListener('click', function() {
@@ -63,3 +69,9 @@ $(rightSection).on('click', '#delete-button', function(){
   readCounter = readCounter - (subtractRead/subtractRead);
   document.querySelector('#readqty').innerText = readCounter;
 });
+
+
+
+
+ inputTitle.addEventListener('keyup', enableButton);
+ enterButton.addEventListener('click', blankInput);
