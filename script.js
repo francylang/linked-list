@@ -11,17 +11,8 @@ var enterButton = document.getElementById('enter-button');
 var bookmarkContainer = document.getElementById('bookmark-container');
 var fillContainer = document.getElementById('filler-container');
 
+document.querySelector('#readqty').innerText = readCounter;
 
-
-
-// need to get counter working and align with this
-// function displayPlaceholder() {
-//   if (bookMarkCounter.length === 0) {
-//     fillContainer.show();
-//   } else {
-//     fillContainer.hide();
-//   }
-// };
 
 function enableButton() {
      if (inputTitle.value !== "") {
