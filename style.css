@@ -4,9 +4,9 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+
 body {
   display: flex;
-  /*flex-direction: row;*/
 }
 
 header {
@@ -14,6 +14,7 @@ header {
   justify-content: center;
   margin-top: 50px;
 }
+
 h1 {
   display: inline-block;
   margin-top: 0;
@@ -21,63 +22,32 @@ h1 {
   color: #FFFFFF;
   font-size: 80px;
   letter-spacing: 2px;
-  /*margin-right: 20px;
-  margin-left: 20px;*/
 }
 
 section {
   width: 50%;
   height: 100vh;
-  /*display: flex;
-  flex-direction: row;*/
 }
 
 .leftside {
   justify-content: center;
   background-color: #455864;
   padding-top: 40px;
-  /*display: flex;
-  flex-direction: row;*/
 }
+
 .rightside {
   align-items: center;
   height: 100vh;
   padding: 0px;
   background-color: #CFD8DC;
   overflow-y: scroll;
-
-  /*overflow-y: scroll;*/
-  /*display: flex;*/
-
 }
 
-/*this would display that the bookmark area is empty*/
-.filler-text {
-  font-size: 50px;
-  color: #455864;
-  text-align: center;
-}
-
-.filler-container {
-}
-
-/*.leftmid{
+.rightmid {
   display: flex;
   flex-direction: column;
-  position: fixed;
 
-}*/
-
-/*.leftmid{
-  position: fixed;
-}*/
-
-.rightmid{
-  display: flex;
-  flex-direction: column;
-  /*overflow-y: scroll;*/
 }
-
 
 #linked {
   margin-right: 10px;
@@ -92,6 +62,7 @@ section {
   height: 100px;
   padding-top: 20px;
 }
+
 .input {
   display: block;
   width: 80%;
@@ -123,9 +94,11 @@ section {
   text-align: center;
   letter-spacing: 1px;
 }
+
 #enter-button:hover {
   background-color: #FFD773;
 }
+
 #enter-button {
   background-color: #FFC107;
   color: #FFFFFF;
@@ -140,11 +113,11 @@ section {
   letter-spacing: 1px;
 }
 
-h3{
+h3 {
   text-align: center;
 }
 
-.bookmarkqty{
+.bookmarkqty {
   color: #FFFFFF;
   font-weight: 400;
   display: inline-block;
@@ -155,17 +128,15 @@ h3{
   padding-left: 10px;
 }
 
-/*CHANGED*/
 .bookmarkbox {
-  /*height: 100vh;*/
   height: 22%;
   min-height: 20%;
   width: 92%;
   margin-top: 4%;
   align-self: center;
-  /*text-align: center;*/
   border: 3px solid #607D8B;
   background-color: #FFFFFF;
+  overflow-wrap: break-word;
 }
 
 #bookmark-line-title {
@@ -179,7 +150,7 @@ h3{
   font-weight: 300px;
 }
 
-#bookmark-line-url{
+#bookmark-line-url {
   display: block;
   color: #607D8B;
   margin-left: 20px;
@@ -195,16 +166,19 @@ hr {
   margin-left: 17px;
   border: none;
 }
+
 #hrOne {
   margin-top: 0;
   margin-bottom: 20px;
 }
+
 .button, .read-button, .delete-button {
   margin-left: 20px;
   font-size: 16px;
   font-weight: 30px;
   outline: none;
 }
+
 .read-button, .delete-button {
   display: inline-block;
   position: relative;
@@ -218,54 +192,53 @@ hr {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .delete-button {
   display: block;
   float: right;
   margin-right: 25px;
 }
+
 .read-button:hover {
   text-decoration-color: #FFC107;
   font-weight: 800;
 }
-.delete-button:hover{
+
+.delete-button:hover {
   text-decoration-color: #FFC107;
 }
 
-.bookmarklinks{
+.bookmarklinks {
   font-size: 20px;
   margin-left: 20px;
   color: #607D8B;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
 }
-.bookmarklinks:hover{
+
+.bookmarklinks:hover {
   text-decoration-color: #FFC107;
   font-weight: 800;
 }
-div.linkdiv{
-  max-height: 100px;
-  border-top: 1px solid #607D8B;
-  border-bottom: 1px solid #607D8B;
-  margin: auto;
+
+.button {
+  color: #455A64;
 }
 
-.button{
-    color: #455A64;
-}
-.read{
+.read {
   background-color: #F2F4F4;
   color: #F05A28;
   text-decoration-color: none;
   font-weight: 800;
 }
-.readlink{
+
+.readlink {
   text-decoration-color: #CFD8DC;
   font-weight: 400;
 }
 
 
-
-  /*Media Queries*/
+/*Media Queries*/
 
 
 /*320px
@@ -276,86 +249,75 @@ div.linkdiv{
 1024px
 1200px*/
 
-
 @media screen and (max-width: 1200px) {
-    #linked,
-    #list {
-      font-size: 70px;
-    }
-    .icon {
-      height: 100px;
-      width: 100px;
-    }
+  #linked, #list {
+    font-size: 70px;
   }
+  .icon {
+    height: 100px;
+    width: 100px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
-    #linked,
-    #list {
-      font-size: 60px;
-    }
-    .icon {
-      height: 75px;
-      width: 75px;
-    }
+  #linked, #list {
+    font-size: 60px;
   }
+  .icon {
+    height: 75px;
+    width: 75px;
+  }
+}
 
 @media screen and (max-width: 900px) {
-    #linked,
-    #list {
-      font-size: 50px;
-    }
-    .icon {
-      height: 50px;
-      width: 50px;
-    }
+  #linked, #list {
+    font-size: 50px;
   }
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+}
 
 @media screen and (max-width: 768px) {
-    body {
-      flex-direction: column;
-    }
-    .leftside {
-      width: 100%;
-    }
-    .rightside {
-      width: 100%;
-    }
-    .input,
-    .enter-button {
-      height: 40px;
-      width: 80%;
-    }
-    .icon {
-      height: 50px;
-      width: 50px;
-    }
-      #linked,
-      #list {
-        font-size: 70px;
-      }
-
+  body {
+    flex-direction: column;
   }
-
-  @media screen
-  and (max-width: 480px) {
-    #linked,
-    #list {
-      font-size: 40px;
-    }
-    .icon {
-      height: 30px;
-      width: 30px;
-    }
+  .leftside {
+    width: 100%;
   }
-
-  @media screen
-  and (max-width: 320px){
-    #linked,
-    #list {
-      font-size: 30px;
-    }
-    .icon {
-        height: 20px;
-        width: 20px;
-    }
+  .rightside {
+    width: 100%;
   }
+  .input, .enter-button {
+    height: 40px;
+    width: 80%;
+  }
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+  #linked, #list {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #linked, #list {
+    font-size: 40px;
+  }
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #linked, #list {
+    font-size: 30px;
+  }
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
+}
