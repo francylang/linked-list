@@ -11,30 +11,25 @@
   <body>
     <section class="leftside">
       <div class="leftmid">
-        <header>
-          <h1 id="linked">Linked</h1>
-          <img id="icon" src="linked-list-logo.svg">
-          <h1 id="list">List</h1>
+        <header role="banner">
+          <h1 id="linked">Linked<img id="icon" src="linked-list-logo.svg" alt="logo of 2 chain links">List</h1>
         </header>
-        <form>
-          <!--1st input field-->
-          <input class="input" id="website-title" type="text" name="website title" value="" placeholder="Website Title">
-          <!--2nd input field-->
-          <input class="input" id="website-url" type="url" name="website url" value="" placeholder="Website url">
-
-          <!--button for creating the bookmark and adding it to the page-->
+        <form role="form">
+          <input class="input" id="website-title" type="text" name="website title" value="" placeholder="Website Title" aria-required="true">
+          <input class="input" id="website-url" type="url" name="website url" value="" placeholder="Website URL" aria-required="true">
           <input id="enter-button" name="enter" type="submit" value="Enter" disabled>
         </form>
-        <h3 class="bookmarkqty"> Total<br> <span id="qty">0</span></h3>
-        <h3 class="bookmarkqty"> Unread<br> <span id="unreadqty">0</span></h3>
-        <h3 class="bookmarkqty"> Read<br> <span id="readqty">0</span></h3>
+      <div class="bookmarkqty">
+        <h3 class="book-count"> Total<br> <span id="qty">0</span></h3>
+        <h3 class="book-count"> Unread<br> <span id="unreadqty">0</span></h3>
+        <h3 class="book-count"> Read<br> <span id="readqty">0</span></h3>
+      </div>
       </div>
     </section>
-    <!--section for all the created bookmarks-->
     <section class="rightside">
-      <!-- <div class="filler-container">
-        <p class="filler-text">Your bookmark library is currently empty</p>
-      </div> -->
+      <!--section for all the created bookmarks-->
+
+      <!-- jQuery -->
     </section>
     <script src="script.js" charset="utf-8"></script>
   </body>
