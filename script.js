@@ -1,20 +1,14 @@
 var rightSection = $('.rightside');
 var readButton = document.getElementById('mark-as-read-button');
-var bookMarkCounter = 0;
-var readCounter = 0;
-var readLength = 0;
 var inputTitle = document.getElementById('website-title');
 var inputUrl = document.getElementById('website-url');
 var enterButton = document.getElementById('enter-button');
+var bookmarkContainer = document.getElementById('bookmark-container');
+var bookMarkCounter = 0;
+var readCounter = 0;
 var unreadCounter = 0;
 
-// added to try and make label for empty container
-var bookmarkContainer = document.getElementById('bookmark-container');
-var fillContainer = document.getElementById('filler-container');
-
-document.querySelector('#readqty').innerText = readCounter;
-
-
+// disables button when page loads
 function enableButton() {
      if (inputTitle.value !== "") {
          enterButton.disabled = false;
@@ -23,15 +17,9 @@ function enableButton() {
      }
  };
 
-function blankInput(){
-  console.log(readCounter);
-  if(inputTitle.value === "" || inputUrl.value === ""){
-    alert("Please enter a title and web address.")
-  }
-}
+ inputTitle.addEventListener('keyup', enableButton);
 
-
-
+// creates a bookmark when enter button is clicked
  enterButton.addEventListener('click', function(event) {
    event.preventDefault();
    inputTitle = $('#website-title');
@@ -69,14 +57,12 @@ function blankInput(){
   document.querySelector('#unreadqty').innerText = unreadCounter;
 });
 
-// deletes bookmark.  sets display to none. DOESNT WORK.
+// deletes bookmark
 $(rightSection).on('click', '#delete-button', function(){
   console.log(readCounter);
   $(this).parent().parent().remove();
   bookMarkCounter = bookMarkCounter - 1;
   document.querySelector('#qty').innerText = bookMarkCounter;
-  // var subtractRead = document.querySelectorAll(' .deletebox .read').length;
-  // console.log("subtractRead " + subtractRead);
   var readCount= document.querySelectorAll('.read').length;
   readCounter = readCount/2;
   document.querySelector('#readqty').innerText = readCounter;
@@ -84,16 +70,11 @@ $(rightSection).on('click', '#delete-button', function(){
   document.querySelector('#unreadqty').innerText = unreadCounter;
 });
 
-
-
-
- inputTitle.addEventListener('keyup', enableButton);
- enterButton.addEventListener('click', blankInput);
-
+// checks if entered URL is valid
  function isUrlValid(input){
    var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
    if(!regex .test(input)) {
-     alert("Please enter valid URL.");
+     alert("Please enter valid URL. Make sure to include https:// or http://");
      console.log("false");
      return false;
    } else {
