@@ -27,7 +27,7 @@ h1 {
 
 section {
   width: 50%;
-  min-height: 100vh;
+  height: 100vh;
   /*display: flex;
   flex-direction: row;*/
 }
@@ -41,10 +41,10 @@ section {
 }
 .rightside {
   align-items: center;
+  height: 100vh;
   padding: 0px;
   background-color: #CFD8DC;
   overflow-y: scroll;
-  overflow: hidden;
 
   /*overflow-y: scroll;*/
   /*display: flex;*/
@@ -75,6 +75,7 @@ section {
 .rightmid{
   display: flex;
   flex-direction: column;
+  /*overflow-y: scroll;*/
 }
 
 
@@ -146,10 +147,11 @@ h3{
 .bookmarkqty{
   color: #FFFFFF;
   font-weight: 400;
-  display: block;
-  width: 80%;
+  display: inline-block;
+  width: 10%;
   height: 40px;
-  margin: 50px auto;
+  margin: 20px auto;
+  margin-left: 17%;
   padding-left: 10px;
 }
 
